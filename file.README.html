@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!file.README.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>crossrefrb</h1>
+
+<p><a href="https://travis-ci.org/sckott/crossrefrb"><img src="https://api.travis-ci.org/sckott/crossrefrb.png" alt="Build Status"></a>
+<a href="http://codecov.io/github/sckott/crossrefrb?branch=master"><img src="http://codecov.io/github/sckott/crossrefrb/coverage.svg?branch=master" alt="codecov.io"></a></p>
+
+<p><code>crossrefrb</code> is a low level client for Crossref APIs</p>
+
+<h2>Changes</h2>
+
+<p>For changes see the <a href="https://github.com/sckott/crossrefrb/blob/master/NEWS.md">NEWS file</a>.</p>
+
+<h2>Install</h2>
+
+<h3>Release version</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_crossrefrb'>crossrefrb</span>
+</code></pre>
+
+<h3>Development version</h3>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_git'>git</span> <span class='id identifier rubyid_clone'>clone</span> <span class='id identifier rubyid_git'>git</span><span class='ivar'>@github</span><span class='period'>.</span><span class='id identifier rubyid_com'>com</span><span class='symbol'>:sckott</span><span class='op'>/</span><span class='id identifier rubyid_crossrefrb'>crossrefrb</span><span class='period'>.</span><span class='id identifier rubyid_git'>git</span>
+<span class='id identifier rubyid_cd'>cd</span> <span class='id identifier rubyid_crossrefrb'>crossrefrb</span>
+<span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_install'>install</span>
+</code></pre>
+
+<h2>Within Ruby</h2>
+
+<p>Search by DOI</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>crossrefrb</span><span class='tstring_end'>&#39;</span></span>
+<span class='const'>Crossref</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>doi:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.1371/journal.pone.0033693</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<p>Search by query string</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>Crossref</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>query:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ecology</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<h2>Meta</h2>
+
+<p>Please note that this project is released with a <a href="CONDUCT.md">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Thu Sep 10 19:15:08 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.2.3).
+</div>
+
+  </body>
+</html>
