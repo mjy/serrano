@@ -61,43 +61,77 @@
 
     <iframe id="search_frame"></iframe>
 
-    <div id="content"><div id='filecontents'><h1>crossrefrb</h1>
+    <div id="content"><div id='filecontents'><h1>serrano</h1>
 
-<p><a href="https://travis-ci.org/sckott/crossrefrb"><img src="https://api.travis-ci.org/sckott/crossrefrb.png" alt="Build Status"></a>
-<a href="http://codecov.io/github/sckott/crossrefrb?branch=master"><img src="http://codecov.io/github/sckott/crossrefrb/coverage.svg?branch=master" alt="codecov.io"></a></p>
+<p><a href="https://travis-ci.org/sckott/serrano"><img src="https://api.travis-ci.org/sckott/serrano.png" alt="Build Status"></a>
+<a href="http://codecov.io/github/sckott/serrano?branch=master"><img src="http://codecov.io/github/sckott/serrano/coverage.svg?branch=master" alt="codecov.io"></a></p>
 
-<p><code>crossrefrb</code> is a low level client for Crossref APIs</p>
+<p><code>serrano</code> is a low level client for Crossref APIs</p>
+
+<p>Docs: <a href="http://recology.info/serrano/">http://recology.info/serrano/</a></p>
 
 <h2>Changes</h2>
 
-<p>For changes see the <a href="https://github.com/sckott/crossrefrb/blob/master/NEWS.md">NEWS file</a>.</p>
+<p>For changes see the <a href="NEWS.md">NEWS file</a>.</p>
+
+<h2>API</h2>
+
+<p>Methods in relation to Crossref search API routes</p>
+
+<ul>
+<li><code>/works</code> - <code>Crossref.works()</code></li>
+<li><code>/members</code> - <code>Crossref.members()</code></li>
+<li><code>/prefixes</code> - <code>Crossref.prefixes()</code></li>
+<li><code>/funders</code> - <code>Crossref.fundref()</code></li>
+<li><code>/journals</code> - <code>Crossref.journals()</code></li>
+<li><code>/licenses</code> - <code>Crossref.licenses()</code></li>
+</ul>
 
 <h2>Install</h2>
 
 <h3>Release version</h3>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_crossrefrb'>crossrefrb</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_serrano'>serrano</span>
 </code></pre>
 
 <h3>Development version</h3>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_git'>git</span> <span class='id identifier rubyid_clone'>clone</span> <span class='id identifier rubyid_git'>git</span><span class='ivar'>@github</span><span class='period'>.</span><span class='id identifier rubyid_com'>com</span><span class='symbol'>:sckott</span><span class='op'>/</span><span class='id identifier rubyid_crossrefrb'>crossrefrb</span><span class='period'>.</span><span class='id identifier rubyid_git'>git</span>
-<span class='id identifier rubyid_cd'>cd</span> <span class='id identifier rubyid_crossrefrb'>crossrefrb</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_git'>git</span> <span class='id identifier rubyid_clone'>clone</span> <span class='id identifier rubyid_git'>git</span><span class='ivar'>@github</span><span class='period'>.</span><span class='id identifier rubyid_com'>com</span><span class='symbol'>:sckott</span><span class='op'>/</span><span class='id identifier rubyid_serrano'>serrano</span><span class='period'>.</span><span class='id identifier rubyid_git'>git</span>
+<span class='id identifier rubyid_cd'>cd</span> <span class='id identifier rubyid_serrano'>serrano</span>
 <span class='id identifier rubyid_rake'>rake</span> <span class='id identifier rubyid_install'>install</span>
 </code></pre>
 
-<h2>Within Ruby</h2>
+<h2>Examples</h2>
 
-<p>Search by DOI</p>
+<p>Search works by DOI</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>crossrefrb</span><span class='tstring_end'>&#39;</span></span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>serrano</span><span class='tstring_end'>&#39;</span></span>
 <span class='const'>Crossref</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>doi:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.1371/journal.pone.0033693</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 </code></pre>
 
-<p>Search by query string</p>
+<p>Search works by query string</p>
 
 <pre class="code ruby"><code class="ruby"><span class='const'>Crossref</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>query:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ecology</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 </code></pre>
+
+<p>Search journals by publisher name</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>Crossref</span><span class='period'>.</span><span class='id identifier rubyid_journals'>journals</span><span class='lparen'>(</span><span class='label'>query:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>peerj</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</code></pre>
+
+<p>Search funding information by DOI</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>Crossref</span><span class='period'>.</span><span class='id identifier rubyid_fundref'>fundref</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.13039/100000001</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.13039/100000015</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
+</code></pre>
+
+<h2>Todo</h2>
+
+<ul>
+<li>Export CLI interface</li>
+<li>More robust test suite</li>
+<li>More examples</li>
+<li>Suite of methods on output data</li>
+</ul>
 
 <h2>Meta</h2>
 
@@ -105,7 +139,7 @@
 </div></div>
 
     <div id="footer">
-  Generated on Thu Sep 10 19:15:08 2015 by
+  Generated on Thu Oct 15 11:47:54 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.3).
 </div>
