@@ -73,14 +73,18 @@
   
   
     
+      <dt class="r1">Extended by:</dt>
+      <dd class="r1"><span class='object_link'><a href="Configuration.html" title="Configuration (module)">Configuration</a></span></dd>
+      
+    
   
     
   
   
   
-    <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/serrano.rb<span class="defines">,<br />
-  lib/serrano/request.rb,<br /> lib/serrano/version.rb,<br /> lib/serrano/filterhandler.rb</span>
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/serrano.rb<span class="defines">,<br />
+  lib/serrano/version.rb,<br /> lib/serrano/request.rb,<br /> lib/serrano/filterhandler.rb</span>
 </dd>
   
 </dl>
@@ -137,6 +141,30 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#agency-class_method" title="agency (class method)">+ (Array) <strong>agency</strong>(ids:) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Determine registration agency for DOIs.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#fundref-class_method" title="fundref (class method)">+ (Array) <strong>fundref</strong>(ids: nil, query: nil, filter: nil, offset: nil, limit: nil, sample: nil, sort: nil, order: nil, facet: nil, works: false) </a>
     
 
@@ -177,6 +205,30 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>Search the journals route.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#licenses-class_method" title="licenses (class method)">+ (Array) <strong>licenses</strong>(ids: nil, query: nil, filter: nil, offset: nil, limit: nil, sample: nil, sort: nil, order: nil, facet: nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Search the licenses route.</p>
 </div></span>
   
 </li>
@@ -233,7 +285,31 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#works-class_method" title="works (class method)">+ (Array) <strong>works</strong>(ids: nil, query: nil, filter: nil, offset: nil, limit: nil, sample: nil, sort: nil, order: nil, facet: nil, works: false) </a>
+      <a href="#types-class_method" title="types (class method)">+ (Array) <strong>types</strong>(ids: nil, query: nil, filter: nil, offset: nil, limit: nil, sample: nil, sort: nil, order: nil, facet: nil, works: false) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Search the types route.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#works-class_method" title="works (class method)">+ (Array) <strong>works</strong>(ids: nil, query: nil, filter: nil, offset: nil, limit: nil, sample: nil, sort: nil, order: nil, facet: nil) </a>
     
 
     
@@ -258,13 +334,117 @@
   
 
 
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Configuration.html" title="Configuration (module)">Configuration</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Configuration.html#configuration-instance_method" title="Configuration#configuration (method)">configuration</a></span>, <span class='object_link'><a href="Configuration.html#define_setting-instance_method" title="Configuration#define_setting (method)">define_setting</a></span></p>
+
 
   <div id="class_method_details" class="method_details_list">
     <h2>Class Method Details</h2>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="fundref-class_method">
+  <h3 class="signature first" id="agency-class_method">
+  
+    + (<tt>Array</tt>) <strong>agency</strong>(ids:) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Determine registration agency for DOIs</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>serrano</span><span class='tstring_end'>&#39;</span></span>
+<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_agency'>agency</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.1371/journal.pone.0033693</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_agency'>agency</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.1007/12080.1874-1746</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.1007/10452.1573-5125</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.1111/(issn)1442-9993</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ids</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>DOIs (digital object identifier) or other identifiers</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An array of Faraday responses</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+238
+239
+240
+241
+242</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 238</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_agency'>agency</span><span class='lparen'>(</span><span class='label'>ids:</span><span class='rparen'>)</span>
+
+  <span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>works</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span>
+    <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='kw'>true</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fundref-class_method">
   
     + (<tt>Array</tt>) <strong>fundref</strong>(ids: nil, query: nil, filter: nil, offset: nil, limit: nil, sample: nil, sort: nil, order: nil, facet: nil, works: false) 
   
@@ -277,7 +457,12 @@
     
 <p>Search the fundref route</p>
 
-<p>the limit and offset parameters are ignored. or published.</p>
+<p>the limit and offset parameters are ignored. updated (date of most recent
+change to metadata. Currently the same as deposited), deposited (time of
+most recent deposit), indexed (time of most recent index), or published
+(publication date). Note: If the API call includes a query, then the sort
+order will be by the relevance score. If no query is included, then the
+sort order will be by DOI update date.</p>
 
 
   </div>
@@ -317,22 +502,6 @@
         &mdash;
         <div class='inline'>
 <p>DOIs (digital object identifier) or other identifiers</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
-        <span class='name'>query</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A query string</p>
 </div>
       
     </li>
@@ -413,7 +582,7 @@ dois. Default: 20. Max: 1000</p>
       
         &mdash;
         <div class='inline'>
-<p>Field to sort on, one of score, relevance, updated, deposited, indexed,</p>
+<p>Field to sort on, one of score, relevance,</p>
 </div>
       
     </li>
@@ -452,6 +621,22 @@ dois. Default: 20. Max: 1000</p>
   
     <li>
       
+        <span class='name'>query</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A query string</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
         <span class='name'>works</span>
       
       
@@ -480,7 +665,7 @@ dois. Default: 20. Max: 1000</p>
       
         &mdash;
         <div class='inline'>
-<p>the output</p>
+<p>An array of Faraday responses</p>
 </div>
       
     </li>
@@ -493,15 +678,15 @@ dois. Default: 20. Max: 1000</p>
       <pre class="lines">
 
 
-124
-125
-126
-127
-128
-129</pre>
+155
+156
+157
+158
+159
+160</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 124</span>
+      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_fundref'>fundref</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>filter:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>offset:</span> <span class='kw'>nil</span><span class='comma'>,</span>
   <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sample:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sort:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>facet:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>works:</span> <span class='kw'>false</span><span class='rparen'>)</span>
@@ -528,7 +713,12 @@ dois. Default: 20. Max: 1000</p>
     
 <p>Search the journals route</p>
 
-<p>the limit and offset parameters are ignored. or published.</p>
+<p>the limit and offset parameters are ignored. updated (date of most recent
+change to metadata. Currently the same as deposited), deposited (time of
+most recent deposit), indexed (time of most recent index), or published
+(publication date). Note: If the API call includes a query, then the sort
+order will be by the relevance score. If no query is included, then the
+sort order will be by DOI update date.</p>
 
 
   </div>
@@ -575,6 +765,119 @@ dois. Default: 20. Max: 1000</p>
   
     <li>
       
+        <span class='name'>filter</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Filter options. See …</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>offset</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Number of record to start at, from 1 to infinity.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>limit</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Number of results to return. Not relavant when searching with specific
+dois. Default: 20. Max: 1000</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sample</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Number of random results to return. when you use the sample parameter,</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sort</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Field to sort on, one of score, relevance,</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>order</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Sort order, one of &#39;asc&#39; or &#39;desc&#39;</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>facet</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Include facet results. Default: false</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
         <span class='name'>query</span>
       
       
@@ -585,6 +888,124 @@ dois. Default: 20. Max: 1000</p>
         &mdash;
         <div class='inline'>
 <p>A query string</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>works</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If true, works returned as well. Default: false</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An array of Faraday responses</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+184
+185
+186
+187
+188
+189</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 184</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_journals'>journals</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>filter:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>offset:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sample:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sort:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>facet:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>works:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+
+  <span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>journals</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_filter'>filter</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_sample'>sample</span><span class='comma'>,</span> <span class='id identifier rubyid_sort'>sort</span><span class='comma'>,</span> <span class='id identifier rubyid_order'>order</span><span class='comma'>,</span> <span class='id identifier rubyid_facet'>facet</span><span class='comma'>,</span> <span class='id identifier rubyid_works'>works</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="licenses-class_method">
+  
+    + (<tt>Array</tt>) <strong>licenses</strong>(ids: nil, query: nil, filter: nil, offset: nil, limit: nil, sample: nil, sort: nil, order: nil, facet: nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Search the licenses route</p>
+
+<p>the limit and offset parameters are ignored. updated (date of most recent
+change to metadata. Currently the same as deposited), deposited (time of
+most recent deposit), indexed (time of most recent index), or published
+(publication date). Note: If the API call includes a query, then the sort
+order will be by the relevance score. If no query is included, then the
+sort order will be by DOI update date.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>serrano</span><span class='tstring_end'>&#39;</span></span>
+<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_licenses'>licenses</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2167-8359</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_licenses'>licenses</span><span class='lparen'>(</span><span class='rparen'>)</span></code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ids</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>DOIs (digital object identifier) or other identifiers</p>
 </div>
       
     </li>
@@ -665,7 +1086,7 @@ dois. Default: 20. Max: 1000</p>
       
         &mdash;
         <div class='inline'>
-<p>Field to sort on, one of score, relevance, updated, deposited, indexed,</p>
+<p>Field to sort on, one of score, relevance,</p>
 </div>
       
     </li>
@@ -704,16 +1125,16 @@ dois. Default: 20. Max: 1000</p>
   
     <li>
       
-        <span class='name'>works</span>
+        <span class='name'>query</span>
       
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>If true, works returned as well. Default: false</p>
+<p>A query string</p>
 </div>
       
     </li>
@@ -732,7 +1153,7 @@ dois. Default: 20. Max: 1000</p>
       
         &mdash;
         <div class='inline'>
-<p>the output</p>
+<p>An array of Faraday responses</p>
 </div>
       
     </li>
@@ -745,21 +1166,21 @@ dois. Default: 20. Max: 1000</p>
       <pre class="lines">
 
 
-151
-152
-153
-154
-155
-156</pre>
+221
+222
+223
+224
+225
+226</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 151</span>
+      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 221</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_journals'>journals</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>filter:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>offset:</span> <span class='kw'>nil</span><span class='comma'>,</span>
-  <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sample:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sort:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>facet:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>works:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_licenses'>licenses</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>filter:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>offset:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sample:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sort:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>facet:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
 
-  <span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>journals</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_filter'>filter</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span>
-    <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_sample'>sample</span><span class='comma'>,</span> <span class='id identifier rubyid_sort'>sort</span><span class='comma'>,</span> <span class='id identifier rubyid_order'>order</span><span class='comma'>,</span> <span class='id identifier rubyid_facet'>facet</span><span class='comma'>,</span> <span class='id identifier rubyid_works'>works</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span>
+  <span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>licenses</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_filter'>filter</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_sample'>sample</span><span class='comma'>,</span> <span class='id identifier rubyid_sort'>sort</span><span class='comma'>,</span> <span class='id identifier rubyid_order'>order</span><span class='comma'>,</span> <span class='id identifier rubyid_facet'>facet</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -780,7 +1201,12 @@ dois. Default: 20. Max: 1000</p>
     
 <p>Search the members route</p>
 
-<p>the limit and offset parameters are ignored. or published.</p>
+<p>the limit and offset parameters are ignored. updated (date of most recent
+change to metadata. Currently the same as deposited), deposited (time of
+most recent deposit), indexed (time of most recent index), or published
+(publication date). Note: If the API call includes a query, then the sort
+order will be by the relevance score. If no query is included, then the
+sort order will be by DOI update date.</p>
 
 
   </div>
@@ -826,22 +1252,6 @@ dois. Default: 20. Max: 1000</p>
   
     <li>
       
-        <span class='name'>query</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A query string</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
         <span class='name'>filter</span>
       
       
@@ -916,7 +1326,7 @@ dois. Default: 20. Max: 1000</p>
       
         &mdash;
         <div class='inline'>
-<p>Field to sort on, one of score, relevance, updated, deposited, indexed,</p>
+<p>Field to sort on, one of score, relevance,</p>
 </div>
       
     </li>
@@ -955,6 +1365,22 @@ dois. Default: 20. Max: 1000</p>
   
     <li>
       
+        <span class='name'>query</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>A query string</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
         <span class='name'>works</span>
       
       
@@ -983,7 +1409,7 @@ dois. Default: 20. Max: 1000</p>
       
         &mdash;
         <div class='inline'>
-<p>the output</p>
+<p>An array of Faraday responses</p>
 </div>
       
     </li>
@@ -996,21 +1422,21 @@ dois. Default: 20. Max: 1000</p>
       <pre class="lines">
 
 
-74
-75
-76
-77
-78
-79</pre>
+102
+103
+104
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 74</span>
+      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_members'>members</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>filter:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>offset:</span> <span class='kw'>nil</span><span class='comma'>,</span>
   <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sample:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sort:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>facet:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>works:</span> <span class='kw'>false</span><span class='rparen'>)</span>
 
   <span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>members</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_filter'>filter</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span>
-    <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_sample'>sample</span><span class='comma'>,</span> <span class='id identifier rubyid_sort'>sort</span><span class='comma'>,</span> <span class='id identifier rubyid_order'>order</span><span class='comma'>,</span> <span class='id identifier rubyid_facet'>facet</span><span class='comma'>,</span> <span class='id identifier rubyid_works'>works</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span>
+    <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_sample'>sample</span><span class='comma'>,</span> <span class='id identifier rubyid_sort'>sort</span><span class='comma'>,</span> <span class='id identifier rubyid_order'>order</span><span class='comma'>,</span> <span class='id identifier rubyid_facet'>facet</span><span class='comma'>,</span> <span class='id identifier rubyid_works'>works</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1031,7 +1457,12 @@ dois. Default: 20. Max: 1000</p>
     
 <p>Search the prefixes route</p>
 
-<p>the limit and offset parameters are ignored. or published.</p>
+<p>the limit and offset parameters are ignored. updated (date of most recent
+change to metadata. Currently the same as deposited), deposited (time of
+most recent deposit), indexed (time of most recent index), or published
+(publication date). Note: If the API call includes a query, then the sort
+order will be by the relevance score. If no query is included, then the
+sort order will be by DOI update date.</p>
 
 
   </div>
@@ -1075,22 +1506,6 @@ dois. Default: 20. Max: 1000</p>
   
     <li>
       
-        <span class='name'>query</span>
-      
-      
-        <span class='type'>(<tt>String</tt>)</span>
-      
-      
-      
-        &mdash;
-        <div class='inline'>
-<p>A query string</p>
-</div>
-      
-    </li>
-  
-    <li>
-      
         <span class='name'>filter</span>
       
       
@@ -1165,7 +1580,7 @@ dois. Default: 20. Max: 1000</p>
       
         &mdash;
         <div class='inline'>
-<p>Field to sort on, one of score, relevance, updated, deposited, indexed,</p>
+<p>Field to sort on, one of score, relevance,</p>
 </div>
       
     </li>
@@ -1232,7 +1647,7 @@ dois. Default: 20. Max: 1000</p>
       
         &mdash;
         <div class='inline'>
-<p>the output</p>
+<p>An array of Faraday responses</p>
 </div>
       
     </li>
@@ -1245,15 +1660,15 @@ dois. Default: 20. Max: 1000</p>
       <pre class="lines">
 
 
-98
-99
-100
-101
-102
-103</pre>
+127
+128
+129
+130
+131
+132</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_prefixes'>prefixes</span><span class='lparen'>(</span><span class='label'>ids:</span><span class='comma'>,</span> <span class='label'>filter:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>offset:</span> <span class='kw'>nil</span><span class='comma'>,</span>
   <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sample:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sort:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>facet:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>works:</span> <span class='kw'>false</span><span class='rparen'>)</span>
@@ -1267,9 +1682,9 @@ dois. Default: 20. Max: 1000</p>
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="works-class_method">
+  <h3 class="signature " id="types-class_method">
   
-    + (<tt>Array</tt>) <strong>works</strong>(ids: nil, query: nil, filter: nil, offset: nil, limit: nil, sample: nil, sort: nil, order: nil, facet: nil, works: false) 
+    + (<tt>Array</tt>) <strong>types</strong>(ids: nil, query: nil, filter: nil, offset: nil, limit: nil, sample: nil, sort: nil, order: nil, facet: nil, works: false) 
   
 
   
@@ -1278,9 +1693,14 @@ dois. Default: 20. Max: 1000</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Search the works route</p>
+<p>Search the types route</p>
 
-<p>the limit and offset parameters are ignored. or published.</p>
+<p>the limit and offset parameters are ignored. updated (date of most recent
+change to metadata. Currently the same as deposited), deposited (time of
+most recent deposit), indexed (time of most recent index), or published
+(publication date). Note: If the API call includes a query, then the sort
+order will be by the relevance score. If no query is included, then the
+sort order will be by DOI update date.</p>
 
 
   </div>
@@ -1292,19 +1712,8 @@ dois. Default: 20. Max: 1000</p>
     
       
       <pre class="example code"><code><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>serrano</span><span class='tstring_end'>&#39;</span></span>
-<span class='comment'># Search by DOI, one or more
-</span><span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.5555/515151</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.1371/journal.pone.0033693</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.1007/12080.1874-1746</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.1007/10452.1573-5125</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.1111/(issn)1442-9993</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
-<span class='comment'># query
-</span><span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>query:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ecology</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>query:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>renear+-ontologies</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='comment'># Sort
-</span><span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>query:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ecology</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='label'>sort:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>relevance</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>order:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>asc</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='comment'># Filters
-</span><span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>filter:</span> <span class='lbrace'>{</span><span class='label'>has_full_text:</span> <span class='kw'>true</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>filter:</span> <span class='lbrace'>{</span><span class='label'>has_funder:</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='label'>has_full_text:</span> <span class='kw'>true</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>filter:</span> <span class='lbrace'>{</span><span class='label'>award_number:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CBET-0756451</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>award_funder:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>10.13039/100000001</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span><span class='rparen'>)</span></code></pre>
+<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_types'>types</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>2167-8359</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='const'>Serrano</span><span class='period'>.</span><span class='id identifier rubyid_types'>types</span><span class='lparen'>(</span><span class='rparen'>)</span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -1328,6 +1737,119 @@ dois. Default: 20. Max: 1000</p>
   
     <li>
       
+        <span class='name'>filter</span>
+      
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Filter options. See …</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>offset</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Number of record to start at, from 1 to infinity.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>limit</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Number of results to return. Not relavant when searching with specific
+dois. Default: 20. Max: 1000</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sample</span>
+      
+      
+        <span class='type'>(<tt>Fixnum</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Number of random results to return. when you use the sample parameter,</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>sort</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Field to sort on, one of score, relevance,</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>order</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Sort order, one of &#39;asc&#39; or &#39;desc&#39;</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>facet</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Include facet results. Default: false</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
         <span class='name'>query</span>
       
       
@@ -1338,6 +1860,137 @@ dois. Default: 20. Max: 1000</p>
         &mdash;
         <div class='inline'>
 <p>A query string</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>works</span>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>If true, works returned as well. Default: false</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>An array of Faraday responses</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+203
+204
+205
+206
+207
+208</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 203</span>
+
+<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_types'>types</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>filter:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>offset:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sample:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sort:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>facet:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>works:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+
+  <span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>types</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_filter'>filter</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_sample'>sample</span><span class='comma'>,</span> <span class='id identifier rubyid_sort'>sort</span><span class='comma'>,</span> <span class='id identifier rubyid_order'>order</span><span class='comma'>,</span> <span class='id identifier rubyid_facet'>facet</span><span class='comma'>,</span> <span class='id identifier rubyid_works'>works</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="works-class_method">
+  
+    + (<tt>Array</tt>) <strong>works</strong>(ids: nil, query: nil, filter: nil, offset: nil, limit: nil, sample: nil, sort: nil, order: nil, facet: nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Search the works route</p>
+
+<p>the limit and offset parameters are ignored. updated (date of most recent
+change to metadata. Currently the same as deposited), deposited (time of
+most recent deposit), indexed (time of most recent index), or published
+(publication date). Note: If the API call includes a query, then the sort
+order will be by the relevance score. If no query is included, then the
+sort order will be by DOI update date.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <p class="tag_title">Examples:</p>
+    
+      
+      <pre class="example code"><code>require &#39;serrano&#39;
+# Search by DOI, one or more
+Serrano.works(ids: &#39;10.5555/515151&#39;)
+Serrano.works(ids: &#39;10.1371/journal.pone.0033693&#39;)
+Serrano.works(ids: [&#39;10.1007/12080.1874-1746&#39;,&#39;10.1007/10452.1573-5125&#39;, &#39;10.1111/(issn)1442-9993&#39;])
+# query
+Serrano.works(query: &quot;ecology&quot;)
+Serrano.works(query: &quot;renear+-ontologies&quot;)
+# Sort
+Serrano.works(query: &quot;ecology&quot;, sort: &#39;relevance&#39;, order: &quot;asc&quot;)
+# Filters
+Serrano.works(filter: {has_full_text: true})
+Serrano.works(filter: {has_funder: true, has_full_text: true})
+Serrano.works(filter: {award_number: &#39;CBET-0756451&#39;, award_funder: &#39;10.13039/100000001&#39;})
+# Curl options
+Serrano.works(ids: &#39;10.1371/journal.pone.0033693&#39;, options: {request.timeout: 3})</code></pre>
+    
+  </div>
+<p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>ids</span>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>DOIs (digital object identifier) or other identifiers</p>
 </div>
       
     </li>
@@ -1418,7 +2071,7 @@ dois. Default: 20. Max: 1000</p>
       
         &mdash;
         <div class='inline'>
-<p>Field to sort on, one of score, relevance, updated, deposited, indexed,</p>
+<p>Field to sort on, one of score, relevance,</p>
 </div>
       
     </li>
@@ -1457,16 +2110,16 @@ dois. Default: 20. Max: 1000</p>
   
     <li>
       
-        <span class='name'>works</span>
+        <span class='name'>query</span>
       
       
-        <span class='type'>(<tt>Boolean</tt>)</span>
+        <span class='type'>(<tt>String</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>If true, works returned as well. Default: false</p>
+<p>A query string</p>
 </div>
       
     </li>
@@ -1485,7 +2138,7 @@ dois. Default: 20. Max: 1000</p>
       
         &mdash;
         <div class='inline'>
-<p>the output</p>
+<p>An array of Faraday responses</p>
 </div>
       
     </li>
@@ -1498,21 +2151,21 @@ dois. Default: 20. Max: 1000</p>
       <pre class="lines">
 
 
-48
-49
-50
-51
-52
-53</pre>
+74
+75
+76
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/serrano.rb', line 74</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_works'>works</span><span class='lparen'>(</span><span class='label'>ids:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>query:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>filter:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>offset:</span> <span class='kw'>nil</span><span class='comma'>,</span>
-  <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sample:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sort:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>facet:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>works:</span> <span class='kw'>false</span><span class='rparen'>)</span>
+  <span class='label'>limit:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sample:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>sort:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>order:</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='label'>facet:</span> <span class='kw'>nil</span><span class='rparen'>)</span>
 
   <span class='const'>Request</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>works</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_ids'>ids</span><span class='comma'>,</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_filter'>filter</span><span class='comma'>,</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span>
-    <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_sample'>sample</span><span class='comma'>,</span> <span class='id identifier rubyid_sort'>sort</span><span class='comma'>,</span> <span class='id identifier rubyid_order'>order</span><span class='comma'>,</span> <span class='id identifier rubyid_facet'>facet</span><span class='comma'>,</span> <span class='id identifier rubyid_works'>works</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span>
+    <span class='id identifier rubyid_limit'>limit</span><span class='comma'>,</span> <span class='id identifier rubyid_sample'>sample</span><span class='comma'>,</span> <span class='id identifier rubyid_sort'>sort</span><span class='comma'>,</span> <span class='id identifier rubyid_order'>order</span><span class='comma'>,</span> <span class='id identifier rubyid_facet'>facet</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_perform'>perform</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1524,7 +2177,7 @@ dois. Default: 20. Max: 1000</p>
 </div>
 
     <div id="footer">
-  Generated on Thu Oct 15 11:47:54 2015 by
+  Generated on Fri Oct 16 17:30:00 2015 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.2.3).
 </div>
