@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "vcr", "~> 6.0"
   s.add_development_dependency "webmock", "~> 3.9", ">= 3.9.3"
 
-  s.add_runtime_dependency "faraday", "~> 1.1"
+  s.add_runtime_dependency "faraday", ">= 1.1", "< 3.0"
   s.add_runtime_dependency "faraday_middleware", "~> 1.0"
   s.add_runtime_dependency "multi_json", "~> 1.15"
   s.add_runtime_dependency "rexml", "~> 3.2", ">= 3.2.4"
